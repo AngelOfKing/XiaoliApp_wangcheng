@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.google.ximalayafm.app.fragments.DiscoveryFragment"
+        >
+
+
+    <!-- 标题栏部分-->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="喜马拉雅TM"
+                android:textColor="#ffff0003"
+                android:textSize="25sp"
+                android:textStyle="italic|bold"
+                android:layout_marginLeft="20dp"
+                />
+        <ImageButton
+                android:id="@+id/discovery_title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_search_category_default"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                />
+    </RelativeLayout>
+
+    <!-- Tab栏-->
+    <android.support.design.widget.TabLayout
+            android:id="@+id/discover_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="#ffff0003"
+            app:tabIndicatorHeight="5dp"
+        />
+    <!-- 内容区-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/discover_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<TextView
+        android:id="@+id/item_album_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="春秋五霸（一）天下无主"
+        android:textStyle="bold"
+        />
+  <RelativeLayout
+          android:id="@+id/album_task_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+      <TextView
+              android:id="@+id/album_task_1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="44万"
+              />
+      <TextView
+              android:id="@+id/album_task_2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/album_task_1"
+              android:paddingLeft="20dp"
+              android:text="37.04"
+              />
+      <TextView
+              android:id="@+id/album_task_3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="20dp"
+              android:layout_toRightOf="@id/album_task_2"
+              android:text="297"
+              />
+      <ImageButton
+              android:id="@+id/item_album_download"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/download_item_pressed"
+              android:layout_alignParentRight="true"
+              />
+
+  </RelativeLayout>
+</LinearLayout>

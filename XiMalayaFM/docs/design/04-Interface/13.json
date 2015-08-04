@@ -1,0 +1,42 @@
+{
+  "ret": 0,
+  "maxPageId": 1,
+  "count": 8,
+  "hasRecommendedZones": true,
+  "isFinished": false,
+  "list": [
+    {
+      "tname": "笑话段子",
+      "category_id": 4
+    },
+    {
+      "tname": "大牌名嘴",
+      "category_id": 4
+    },
+    {
+      "tname": "涨姿势",
+      "category_id": 4
+    },
+    {
+      "tname": "明星访谈",
+      "category_id": 4
+    },
+    {
+      "tname": "娱乐八卦",
+      "category_id": 4
+    },
+    {
+      "tname": "神吐槽",
+      "category_id": 4
+    },
+    {
+      "tname": "万合频道",
+      "category_id": 4
+    },
+    {
+      "tname": "星座风水",
+      "category_id": 4
+    }
+  ],
+  "msg": "成功"
+}

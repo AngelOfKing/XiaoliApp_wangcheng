@@ -1,0 +1,62 @@
+UI ����
+
+SplashActivity ������ҳ
+GuideActivity   �̳�ҳ
+MainActivity    ������
+Fragment ����
+    DiscoveryFragment ������Ŀ����
+        ����Ŀ��Fragment:
+            DiscoveryRecommendFragment �Ƽ�����Ŀ
+            DiscoveryCategoryFragment  ��������Ŀ
+            DiscoveryLiveFragment      ֱ������Ŀ
+            DiscoveryRankingFragment   ������Ŀ
+            DiscoveryAnchorFragment    ��������Ŀ
+
+    CustomFragment ������ ����
+    DownloadTingFragment ������ ����
+    PreferFragment �� ����
+
+------------------------------------
+���粿�֣�
+client   ��
+HttpUtil  HTTP���󹤾���
+CientDiscoveryAPI �����С�����"��Ŀ�����нӿڵ���
+
+util     ��
+StreamUtil  ���ڶ�ȡIO��
+
+tasks ��
+    BaseTask �������첽�����ṩ�����ķ���
+    TaskResult �첽�����װ�Ľ��
+    taskCallback �첽����ص��ӿ�
+   impl ��
+   CategoryMenu ��ȡ�����µ�menu
+
+3.后台的数据请求流程：
+1）定义实体类
+2）实体类内部的解析
+3）定义异步任务,
+4）定义实际的联网操作url,参数
+5）数据json解析 DataParse。data,返回JSONObject;
+6）启动异步任务，编写TaskCallback的回调
+7）收到TaskResult.data,数据JSON解析，DataParse
+8）DataParser返回数据对象，采用实体类解析JSON
+9）更新数据与UI
+
+
+推荐的主界面：json对象
+
+    排列顺序：
+    焦点图（顶部）------->focusImages 数据
+    小编推荐-------------->editorRecommendAlbums数据
+    精品听单-------------->specialColumn 数据
+    发现新奇------------->discoveryColumns数据
+    热门推荐--------------->hotRecommends数据 内部包含多个子分类
+
+    有些结构是包含了hasMore的设置，有的支持更多
+    4.内部的结构是不同的
+    5.内容的展示：可以实现的两种方式
+        a.使用ListView实现复杂的多布局复用的条目展示
+        b.使用ScrollView通过代码来进行动态的添加
+    最终确认使用ListView来实现
+   6.推荐的adapter，直接传递一个对象，内部包含不同的数据，通过这个类

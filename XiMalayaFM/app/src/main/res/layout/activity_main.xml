@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+<!--Fragment 容器-->
+    <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            ></FrameLayout>
+<!--Tab-->
+   <RadioGroup
+           android:id="@+id/main_bar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           >
+       <RadioButton
+               android:id="@+id/main_tab_item_discovery"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:backgroundTint="@color/shadow_start_color"
+               android:text="发现"
+               />
+       <RadioButton
+               android:id="@+id/main_tab_item_custom"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="定制听"
+               />
+       <RadioButton
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:button="@null"
+               android:clickable="false"
+               />
+       <RadioButton
+               android:id="@+id/main_bar_item_download"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="下载听"
+               />
+       <RadioButton
+               android:id="@+id/main_bar_item_prefer"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="我"
+               />
+
+
+   </RadioGroup>
+
+</LinearLayout>
