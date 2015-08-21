@@ -11,7 +11,12 @@ import com.google.xiaoliapp.app.entities.TopicCare;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 关怀话题---精品关怀
+ *
+ * 点击--------跳转：关怀话题详情页
+ *
+ */
 public class TopicCareActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
 
     private ListView listView;
@@ -42,7 +47,7 @@ public class TopicCareActivity extends ActionBarActivity implements AdapterView.
     }
 
 
-    //Item的点击事件,点击跳转到页面4，送礼页面
+    //TODO Item的点击事件,点击跳转到页面30，关怀话题详情页
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 

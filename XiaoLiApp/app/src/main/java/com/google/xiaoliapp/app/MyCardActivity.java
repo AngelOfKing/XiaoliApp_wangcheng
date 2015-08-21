@@ -16,6 +16,9 @@ import com.google.xiaoliapp.app.entities.Card;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 我的卡券页面
+ */
 
 public class MyCardActivity extends ActionBarActivity {
 

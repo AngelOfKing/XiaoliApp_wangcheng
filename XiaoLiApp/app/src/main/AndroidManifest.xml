@@ -102,28 +102,6 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".HelloTabScrollActivity"
-            android:label="@string/title_activity_tab_host_demo" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity
-            android:name=".TabHostDemoActivity"
-            android:label="@string/title_activity_tab_host_demo" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity
             android:name=".TopicCareActivity"
             android:label="@string/title_activity_topic_care" >
             <!--<intent-filter>-->

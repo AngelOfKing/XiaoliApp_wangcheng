@@ -30,7 +30,6 @@
                     android:padding="10dp"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/u3"
                     android:layout_toRightOf="@id/txt_number"
                     android:layout_marginLeft="40dp"
                     android:hint="请输入所注册的手机号"
@@ -39,6 +38,7 @@
                     />
 
             <TextView
+                    android:id="@+id/text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@id/edit_number"
@@ -48,12 +48,13 @@
                     />
 
             <Button
+                    android:id="@+id/btn_getCode"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:text="获取验证码"
-                    android:autoLink="phone"
+                    android:layout_alignBottom="@id/text_view"
                     android:textColor="#fff"
-                    android:background="#f00"
+                    android:background="@drawable/button_shape"
                     android:layout_alignRight="@id/edit_number"
                     android:layout_below="@id/edit_number"
                     />
@@ -78,7 +79,6 @@
                     android:layout_toRightOf="@id/txt_testCode"
                     android:layout_marginLeft="40dp"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/u3"
                     android:hint="请输入6位短信密码"
                     android:layout_alignBaseline="@id/txt_testCode"
                     />
@@ -101,7 +101,6 @@
                     android:padding="10dp"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/u3"
                     android:hint="请输入6-12位密码"
                     android:layout_marginLeft="60dp"
                     android:layout_alignParentTop="true"
@@ -127,8 +126,8 @@
                     android:id="@+id/edit_password_ensure"
                     android:padding="10dp"
                     android:layout_width="250dp"
+                    android:background="@drawable/shape_forgetpsw_edittext"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/u3"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@id/txt_password_ensure"
@@ -146,9 +145,8 @@
                 android:layout_height="wrap_content"
                 android:text="确定"
                 android:textColor="#fff"
-                android:background="#f00"
+                android:background="@drawable/button_shape"
                 />
-
     </LinearLayout>
 
 </RelativeLayout>
