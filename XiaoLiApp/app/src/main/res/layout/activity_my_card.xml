@@ -2,15 +2,94 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context="com.google.xiaoliapp.app.MyCardActivity">
 
-    <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <RelativeLayout
+            android:id="@+id/common_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffdd3049"
+            >
+        <Button
+                android:id="@+id/common_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                />
+        <!-- 应该用TabLayout-->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                >
+            <Button
+                    android:id="@+id/validcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="#00000000"
+                    android:textColor="#fff"
+                    android:text="可用卡券"
+                    />
+            <Button
+                    android:id="@+id/usedcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="#00000000"
+                    android:textColor="#fff"
+                    android:text="历史卡券"
+                    />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <ListView
+            android:id="@+id/my_card_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/common_head"
+            ></ListView>
+
+    <RadioGroup
+            android:id="@+id/common_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFF"
+            android:padding="2dp"
+            android:layout_alignParentBottom="true"
+            >
+        <RadioButton
+                android:id="@+id/common_tab_relationManage"
+                style="@style/Myself_RadioButton"
+                android:drawableTop="@drawable/gray01"
+                android:text="关系管理"
+                />
+        <RadioButton
+                android:id="@+id/common_tab_gift_strategy"
+                style="@style/Myself_RadioButton"
+                android:drawableTop="@drawable/gray2"
+                android:text="情礼攻略"
+                />
+        <RadioButton
+                android:id="@+id/common_tab_discovery"
+                style="@style/Myself_RadioButton"
+                android:drawableTop="@drawable/gray3"
+                android:text="发现"
+                />
+        <RadioButton
+                android:id="@+id/common_tab_myself"
+                style="@style/Myself_RadioButton"
+                android:drawableTop="@drawable/gray4"
+                android:text="我"
+                />
+    </RadioGroup>
 
 </RelativeLayout>

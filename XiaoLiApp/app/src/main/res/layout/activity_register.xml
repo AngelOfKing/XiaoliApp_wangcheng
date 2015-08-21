@@ -8,9 +8,136 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context="com.google.xiaoliapp.app.RegisterActivity">
 
-    <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+   <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           >
+       <RelativeLayout
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+           <TextView
+                   android:id="@+id/txt_number"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="手机号"
+                   android:textAlignment="center"
+                   />
+           <EditText
+                   android:id="@+id/edit_number"
+                   android:padding="10dp"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/u3"
+                   android:layout_toRightOf="@id/txt_number"
+                   android:layout_marginLeft="40dp"
+                   android:hint="请输入所注册的手机号"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignBaseline="@id/txt_number"
+                   />
+           <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="获取验证码"
+                   android:autoLink="web"
+                   android:textColor="#ff312bff"
+                   android:layout_below="@id/edit_number"
+                   android:layout_alignLeft="@id/edit_number"
+                   />
+       </RelativeLayout>
+
+       <RelativeLayout
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+           <TextView
+                   android:id="@+id/txt_password"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="密码"
+                   />
+           <EditText
+                   android:id="@+id/edit_password"
+                   android:padding="10dp"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/u3"
+                   android:hint="请输入6-12密码"
+                   android:layout_marginLeft="60dp"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_toRightOf="@id/txt_password"
+                   android:inputType="numberPassword"
+                   />
+       </RelativeLayout>
+
+
+       <RelativeLayout
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+           <TextView
+                   android:id="@+id/txt_password_ensure"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="确认密码"
+                   />
+           <EditText
+                   android:id="@+id/edit_password_ensure"
+                   android:padding="10dp"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/u3"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_toRightOf="@id/txt_password_ensure"
+                   android:layout_marginLeft="30dp"
+                   android:hint="请再次输入密码"
+                   android:inputType="numberPassword"
+                   android:layout_alignBaseline="@id/txt_password_ensure"
+                   />
+       </RelativeLayout>
+
+
+       <RelativeLayout
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+           <TextView
+                   android:id="@+id/txt_testCode"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="验证码"
+                   />
+           <EditText
+                   android:id="@+id/edit_testCode"
+                   android:padding="10dp"
+                   android:layout_width="250dp"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@id/txt_testCode"
+                   android:layout_marginLeft="40dp"
+                   android:layout_alignParentRight="true"
+                   android:hint="请输入6位短信密码"
+                   android:layout_alignBaseline="@id/txt_testCode"
+                   />
+       </RelativeLayout>
+       
+       
+       <Button
+               android:layout_width="match_parent"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_height="wrap_content"
+               android:text="注册"
+               android:textColor="#fff"
+               android:background="#f00"
+               />
+
+   </LinearLayout>
 
 </RelativeLayout>

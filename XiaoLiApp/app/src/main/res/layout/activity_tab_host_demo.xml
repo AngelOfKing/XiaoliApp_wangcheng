@@ -1,16 +1,60 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="com.google.xiaoliapp.app.TabHostDemoActivity">
+                >
 
-    <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+    <!-- TabHost必须包含一个 TabWidget和一个FrameLayout -->
+
+    <TabHost
+            android:id="@+id/myTabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+            <!-- TabWidget的id属性必须为 @android:id/tabs -->
+
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" />
+            <!-- FrameLayout的id属性必须为 @android:id/tabcontent -->
+
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0" >
+                <ListView
+                        android:id="@+id/list_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></ListView>
+                <TextView
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="齐天大圣出世" />
+
+                <TextView
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="孙悟空大战牛魔王" />
+
+                <TextView
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="斗战圣佛" />
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

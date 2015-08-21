@@ -2,38 +2,27 @@ package com.google.xiaoliapp.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import junit.framework.Test;
 
-
-public class PersonInfoActivity extends ActionBarActivity {
+/**
+ * 页面32----我的个人信息
+ */
+public class PersonInfoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person_info);
+        RelativeLayout body = (RelativeLayout) this.findViewById(R.id.common_body);
+        TextView view = (TextView)this.findViewById(R.id.common_head_text);
+        view.setText("个人信息");
+        LayoutInflater.from(this).inflate(R.layout.activity_person_info,body);
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_person_info, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

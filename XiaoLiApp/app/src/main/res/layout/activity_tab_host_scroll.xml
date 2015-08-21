@@ -4,6 +4,13 @@
                 android:layout_height="match_parent"
               android:orientation="vertical"
                 >
+
+    <!-- -->
+    <!--<android.support.v4.widget.FrameTabHost>-->
+        <!-- -->
+    <!--</android.support.v4.widget.FrameTabHost>-->
+
+
 <!-- 其中包含了两个必要的子元素：TabWidget和FrameLayout，其id都是固定值 -->
     <TabHost
             android:id="@+id/myTabHost"
@@ -22,7 +29,6 @@
                     android:scrollbars="none" >
 <!--TabHost 的TabWidget是必须的组件 ，命名也是固定的-->
                 <TabWidget
-
                         android:id="@android:id/tabs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

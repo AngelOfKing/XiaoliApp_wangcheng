@@ -2,8 +2,19 @@ package com.google.xiaoliapp.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import com.google.xiaoliapp.app.adapters.MycardAdapter;
+import com.google.xiaoliapp.app.entities.Card;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyCardActivity extends ActionBarActivity {
@@ -11,29 +22,25 @@ public class MyCardActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_card);
-    }
+       setContentView(R.layout.activity_my_card);
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my_card, menu);
-        return true;
-    }
+        ListView listView = (ListView)findViewById(R.id.my_card_listView);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        List<Card>  cardList = new ArrayList<Card>();
+        //TODO 添加数据需要动态调整
+        for (int i = 0; i < 6; i++) {
+            Card card = new Card(R.drawable.mycard,
+                        "使用限制xxxxxxxx",
+                        "使用规则xxxxxxxx",
+                        "晓礼网创意婚庆礼品优惠券",
+                        "2015-6-15至2015-8-15"
+                    );
+            cardList.add(card);
         }
-
-        return super.onOptionsItemSelected(item);
+        MycardAdapter adapter = new MycardAdapter(cardList,this);
+        listView.setAdapter(adapter);
     }
+
+
 }

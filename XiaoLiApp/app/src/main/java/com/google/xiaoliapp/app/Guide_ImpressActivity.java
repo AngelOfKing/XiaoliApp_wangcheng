@@ -1,39 +1,46 @@
 package com.google.xiaoliapp.app;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import com.google.xiaoliapp.app.adapters.ImpressAdapter;
+import com.google.xiaoliapp.app.entities.Impress;
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class Guide_ImpressActivity extends ActionBarActivity {
+public class Guide_ImpressActivity extends BaseActivity {
+    private RecyclerView recyclerView;
+    private List<Impress> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_impress);
+        setContentView(R.layout.activity_guide_impress);
+
+
+        recyclerView = (RecyclerView) findViewById(R.id.impress_recycleView);
+
+        initDatas();
+        ImpressAdapter adapter = new ImpressAdapter(this,list);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_impress, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    public void initDatas(){
+        list = new ArrayList<Impress>();
+        for (int i = 0; i < 3; i++) {
+            Impress impress = new Impress();
+            impress.setCai("27");
+            impress.setZan("36");
+            impress.setDate("6-7");
+            impress.setNick("大寻求");
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
 }

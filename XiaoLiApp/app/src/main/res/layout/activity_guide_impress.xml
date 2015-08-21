@@ -60,7 +60,31 @@
             android:layout_below="@id/impress_layout"
             ></android.support.v7.widget.RecyclerView>
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="写下你对TA的评论"
+                android:padding="5dp"
+                android:background="@drawable/edit_text_shape"
 
+                />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评 论"
+                android:textColor="#fff"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_shape"
+                />
+
+    </LinearLayout>
 
 
 

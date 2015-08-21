@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/myself_u2"
+             tools:context="com.google.xiaoliapp.app.fragments.MyselfFragment">
+
+    <ListView
+            android:id="@+id/myself_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="15dp"
+            android:divider="#ffddd9dc"
+            ></ListView>
+
+</LinearLayout>

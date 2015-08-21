@@ -2,38 +2,127 @@ package com.google.xiaoliapp.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import com.google.xiaoliapp.app.adapters.Topic_CareAdapter;
+import com.google.xiaoliapp.app.entities.TopicCare;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class TopicCareActivity extends ActionBarActivity {
+public class TopicCareActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
+
+    private ListView listView;
+    private List<TopicCare> list;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic_care);
-    }
 
+        listView = (ListView)findViewById(R.id.topic_care_listView);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_topic_care, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        list = new ArrayList<TopicCare>();
+        if(list!=null){
+            for (int i = 0; i < 3; i++) {
+                TopicCare care = new TopicCare();
+                care.setDetails("为了迎接抗战胜利70周年阅兵活动，北京市对长安街复兴门至建国门之间的");
+                care.setImage(R.drawable.topic_care);
+                list.add(care);
+            }
         }
+        Topic_CareAdapter adapter = new Topic_CareAdapter(this,list);
+        listView.setAdapter(adapter);
+        listView.setFastScrollEnabled(false);
+        listView.setOnItemClickListener(this);
+    }
 
-        return super.onOptionsItemSelected(item);
+
+    //Item的点击事件,点击跳转到页面4，送礼页面
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

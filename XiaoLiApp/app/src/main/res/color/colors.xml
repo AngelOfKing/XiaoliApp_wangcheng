@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--color背景选择器selector：选中为红色，默认为黑色
+可以设置textColor或者background
+-->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:color="#ff131313"/>
+    <item android:color="@color/BaseRed" android:state_selected="true"/>
 </selector>

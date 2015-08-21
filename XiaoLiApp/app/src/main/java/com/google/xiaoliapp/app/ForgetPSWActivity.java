@@ -20,8 +20,6 @@ public class ForgetPSWActivity extends BaseActivity {
 
         TextView headTile = (TextView) this.findViewById(R.id.common_head_text);
         headTile.setText("忘记密码");
-        headTile.setBackgroundColor(Color.RED);
-        headTile.setTextColor(Color.WHITE);
         RelativeLayout commonBody = (RelativeLayout) this.findViewById(R.id.common_body);
         LayoutInflater.from(this).inflate(R.layout.activity_forget_psw,commonBody);
 
